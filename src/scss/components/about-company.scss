@@ -1,0 +1,28 @@
+.company {
+    margin: 50px auto;
+
+    // &__img img {
+    //     width: 75%;
+    // }
+    &__img {
+        background: url(../images/домик.jpg) left/ contain no-repeat;
+    }
+
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1000px 260px;
+        grid-template-rows: 600px 1fr;
+        gap: 50px 0;
+    }
+
+    &__right,
+    &__bottom {
+        font-size: 22px;
+        text-indent: 15px;
+    }
+
+    &__right {
+        line-height: 26px;
+    }
+}

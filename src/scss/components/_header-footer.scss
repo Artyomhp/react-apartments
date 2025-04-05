@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Cambria';
+    src: url(/font/Cambria.ttf);
+}
+
+body {
+    font-family: 'Cambria';
+    background-color: rgb(230, 230, 230);
+    font-size: 18px;
+    color: rgb(36, 76, 79);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.header {
+    padding: 20px 0;
+    background-color: rgb(236, 248, 248);
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    color: rgb(36, 76, 79);
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: black;
+
+}
+
+.header__logo {
+    gap: 20px;
+    margin-right: auto;
+    font-size: 26px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.name a {
+    color: black;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header__menu {
+    margin-right: auto;
+}
+
+.header__menu--list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    color: rgb(36, 76, 79);
+    font-size: 24px;
+}
+
+.menu__item--user {
+    padding: 8px;
+    background-color: rgb(36, 76, 79);
+    font-size: 24px;
+}
+
+.menu__item--link {
+    color: #fff;
+}
+
+
+.footer {
+    background-color: rgb(236, 248, 248);
+    padding: 15px 0;
+}
+
+.footer__inner {
+    display: flex;
+    margin-right: auto;
+}
+
+.footer__logo {
+    flex-direction: column;
+    font-style: italic;
+    font-size: 16px;
+    gap: 5px;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer__menu--list {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.menu__item a {
+    color: rgb(36, 76, 79);
+}
+
+.footer__link {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.link img{
+    width: 30px;
+    height: 30px;
+}
+
+.link__inst img {
+    margin-left: 400px;
+    width: 37px;
+    height: 37px;
+}
+
+.link__vk img {
+    width: 25px;
+    height: 25px;
+}
+
+.link__email  {
+    margin-left: auto;
+}
+    
+.link__email a {
+    color: grey;
+}

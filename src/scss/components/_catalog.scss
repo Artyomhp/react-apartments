@@ -1,0 +1,169 @@
+.filter {
+    width: 400px;
+    height: 850px;
+    border: 1px solid rgb(36, 76, 79);
+    padding: 25px 50px;
+}
+
+.filter__label {
+    font-size: 28px;
+    text-align: center;
+}
+
+.filter__row {
+    padding: 50px 0;
+}
+
+.filter__room {
+    display: flex;
+    justify-content: space-between;
+    font-size: 32px;
+}
+
+.square {
+    display: flex;
+    justify-content: space-between;
+}
+
+.room__category {
+    font-size: 32px;
+    background-color: inherit;
+    color: inherit;
+}
+
+.filter__square {
+    border: 1px solid rgb(172, 184, 182);
+    color: rgb(36, 76, 79);
+    background-color: inherit;
+    font-size: 26px;
+    width: 125px;
+}
+
+.filter__square::placeholder {
+    color: rgb(172, 184, 182);
+    padding: 10px;
+}
+
+.renovation {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.renovation__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.renovation__top button {
+    background-color: inherit;
+    color: inherit;
+    font-size: 20px;
+}
+
+.floor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter__floor {
+    border: 1px solid rgb(172, 184, 182);
+    color: rgb(36, 76, 79);
+    background-color: inherit;
+    font-size: 26px;
+    width: 125px;
+}
+
+.filter__action {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.filter__action button {
+    background-color: rgb(36, 76, 79);
+    color: #fff;
+    padding: 5px 0;
+    font-size: 28px;
+}
+
+.filter__action button:last-child {
+    background-color: rgb(158, 182, 183);
+}
+
+.catalog {
+    margin: 50px 0;
+}
+
+.catalog__wrapper {
+    display: flex;
+    gap: 185px;
+}
+
+.catalog__title {
+    font-size: 72px;
+    text-align: right;
+    margin-bottom: 30px;
+    padding-right: 100px;
+}
+
+.catalog__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.catalog__item {
+    padding: 25px;
+    background-color: rgb(36, 76, 79);
+    width: 800px;
+}
+
+.catalog__item a {
+    display: flex;
+    gap: 25px;
+    color: rgb(230, 230, 230);
+}
+
+.catalog__img {
+    width: 150px;
+}
+
+.catalog__img img {
+    width: 150px;
+}
+
+.catalog__description {
+    display: grid;
+    gap: 25px;
+    align-items: center;
+    grid-template-areas: 'room square . . . . . . . price'
+        'entrance floor . . . . . . . .'
+        'renovation . . . . . . . . .';
+}
+
+.catalog__room {
+    grid-area: room;
+}
+
+.catalog__square {
+    grid-area: square;
+}
+
+.catalog__price {
+    grid-area: price;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.catalog__entrance {
+    grid-area: entrance;
+}
+
+.catalog__floor {
+    grid-area: floor;
+}
+
+.catalog__renovation {
+    grid-area: renovation;
+}
