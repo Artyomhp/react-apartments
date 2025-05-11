@@ -1,14 +1,24 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-
-import { setReset } from "../redux/slices/filterSlice";
+// import { useSelector, useDispatch } from "react-redux";
+// import { setRoom, setFinishing, setApply } from "../redux/slices/filterSlice";
 import { FilterAreaSlider } from "../components/FilterAreaSlider";
-export const Filter = ({ roomValue, onClickRoom, onClickApply }) => {
+export const Filter = ({
+  roomValue,
+  areaValue,
+  floorValue,
+  finishingValue,
+  onRoomChange,
+  onAreaChange,
+  onFloorChange,
+  onFinishingChange,
+  onApply,
+  onReset,
+}) => {
   const rooms = [1, 2, 3];
-  const finishing = ["все", "white-box", "с ремонтом", "без отделки"];
-  const arrays = {
-    arrArea: [37, 85],
-    arrFloor: [1, 8],
+  const finishingTypes = ["все", "white-box", "с ремонтом", "без отделки"];
+
+  const handleFinishingClick = (finishType) => {
+    dispatch(setFinishing(finishType));
   };
   return (
     <div className="filter">
@@ -20,7 +30,7 @@ export const Filter = ({ roomValue, onClickRoom, onClickApply }) => {
               {rooms.map((obj, id) => (
                 <button
                   key={id}
-                  onClick={() => onClickRoom(obj)}
+                  // onClick={() => onRoomChange(obj)}
                   className={
                     roomValue === obj
                       ? "room__category active"
@@ -35,13 +45,22 @@ export const Filter = ({ roomValue, onClickRoom, onClickApply }) => {
         </li>
         <li className="filter__item">
           <h5 className="filter__label">Площадь</h5>
-          <FilterAreaSlider defaultValue={arrays.arrArea} min={37} max={85} />
+          <FilterAreaSlider
+            defaultValue={areaValue}
+            min={37}
+            max={85}
+            onChange={onAreaChange}
+          />
         </li>
         <li className="filter__item">
           <h5 className="filter__label">Отделка</h5>
           <div className="filter__finishing">
-            {finishing.map((obj, id) => (
-              <button key={id} className="finishing__category">
+            {finishingTypes.map((obj, id) => (
+              <button
+                key={id}
+                // onClick={onFinishingChange(obj)}
+                className="finishing__category"
+              >
                 {obj}
               </button>
             ))}
@@ -49,13 +68,25 @@ export const Filter = ({ roomValue, onClickRoom, onClickApply }) => {
         </li>
         <li className="filter__item">
           <h5 className="filter__label">Этаж</h5>
-          <FilterAreaSlider defaultValue={arrays.arrFloor} min={1} max={8} />
+          <FilterAreaSlider
+            name="floor"
+            defaultValue={floorValue}
+            min={1}
+            max={8}
+            onChange={onFloorChange}
+          />
         </li>
         <li className="filter__action">
-          <button onClick={() => onClickApply()} className="apply">
+          <button
+            // onClick={onApply}
+            className="apply"
+          >
             Применить
           </button>
-          <button className="reset" onClick={setReset}>
+          <button
+            className="reset"
+            // onClick={onReset}
+          >
             Сбросить
           </button>
         </li>

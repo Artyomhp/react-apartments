@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     room: null,
     area: [37, 85],
-    finishing: '',
+    finishing: 'все',
     floor: [1, 8],
     appliedFilters: null
 }
@@ -32,11 +32,12 @@ const filterSlice = createSlice({
                 floor: [...state.floor],
             }
         },
-        setReset: () => initialState
+        setReset: (state) => {
+            Object.assign(state, initialState)
+        }
     }
 })
 
-// export const { setRoom, setFinishing, setReset } = filterSlice.actions
 export const { setRoom, setFinishing, setArea, setFloor, setApply, setReset } = filterSlice.actions
 
 export default filterSlice.reducer
