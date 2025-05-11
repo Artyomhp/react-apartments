@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import logo from "../assets/img/icons/logo (blue).png";
 
 export const Header = () => {
   return (
@@ -8,7 +9,7 @@ export const Header = () => {
         <div className="header__inner">
           <Link to="/">
             <div className="header__logo logo">
-              <img src="./src/assets/img/icons/logo (blue).png" alt=""></img>
+              <img src={logo} alt=""></img>
               <span className="header__name name">УЮТНЫЙ ГОРИЗОНТ</span>
             </div>
           </Link>
@@ -25,7 +26,9 @@ export const Header = () => {
               </Link>
             </ul>
           </nav>
-          <div className="menu__item--user">Личный кабинет</div>
+          <Link to="#">
+            <div className="menu__item--number">+7 (495) 221-40-22</div>
+          </Link>
         </div>
       </div>
     </header>

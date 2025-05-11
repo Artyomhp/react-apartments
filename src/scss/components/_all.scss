@@ -1,4 +1,8 @@
-@import './header-footer';
-@import './catalog';
-@import './about-company.scss';
-@import './contacts.scss';
+@use '../libs/nullstyle.scss';
+@use './header-footer';
+@use './catalog';
+@use './about-company.scss';
+@use './contacts.scss';
+@use './full-apartment.scss';
+@use './chat.scss';
+@use './mortgage'

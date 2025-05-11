@@ -1,34 +1,21 @@
-@font-face {
-    font-family: 'Cambria';
-    src: url(/font/Cambria.ttf);
-}
+// @font-face {
+//     font-family: 'Cambria';
+//     src: url(/font/Cambria.ttf);
+// }
 
-body {
-    font-family: 'Cambria';
-    background-color: rgb(230, 230, 230);
-    font-size: 18px;
-    color: rgb(36, 76, 79);
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-}
-
-.content {
-    flex: 1 1 auto;
-}
 
 .header {
     padding: 20px 0;
-    background-color: rgb(236, 248, 248);
+    // background-color: rgb(236, 248, 248);
+    // background-color: rgb(100, 120, 160);
+    background-color: rgb(5, 14, 41);
+    border-bottom: 1px solid #f1ebeb;
+
 }
 
 .header__inner {
     display: flex;
     align-items: center;
-    color: rgb(36, 76, 79);
     justify-content: space-between;
     font-size: 18px;
 }
@@ -36,8 +23,7 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    color: black;
-
+    color: #f1ebeb;
 }
 
 .header__logo {
@@ -51,43 +37,29 @@ body {
     height: 50px;
 }
 
-.name a {
-    color: black;
-}
-
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.header__menu {
-    margin-right: auto;
-}
-
 .header__menu--list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 100px;
-    color: rgb(36, 76, 79);
-    font-size: 24px;
+    font-size: 25px;
 }
 
-.menu__item--user {
-    padding: 8px;
-    background-color: rgb(36, 76, 79);
-    font-size: 24px;
+.menu__item--number {
+    font-size: 26px;
+    font-weight: 900;
+    color: #f1ebeb;
 }
 
-.menu__item--link {
-    color: #fff;
+.menu__item {
+    color: #f1ebeb;
 }
 
 
 .footer {
-    background-color: rgb(236, 248, 248);
+    // background-color: rgb(236, 248, 248);
     padding: 15px 0;
+    border-top: 1px solid #f1ebeb;
 }
 
 .footer__inner {
@@ -116,9 +88,9 @@ body {
     gap: 150px;
 }
 
-.menu__item a {
-    color: rgb(36, 76, 79);
-}
+// .menu__item a {
+//     color: rgb(36, 76, 79);
+// }
 
 .footer__link {
     display: flex;
@@ -126,7 +98,7 @@ body {
     gap: 100px;
 }
 
-.link img{
+.link img {
     width: 30px;
     height: 30px;
 }
@@ -142,10 +114,10 @@ body {
     height: 25px;
 }
 
-.link__email  {
+.link__email {
     margin-left: auto;
 }
-    
+
 .link__email a {
     color: grey;
 }

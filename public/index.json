@@ -1,0 +1,74 @@
+[
+  {
+    "id": 0,
+    "imageUrl": "./src/assets/img/bank/sberbank.jpg",
+    "mortgage": "Семейная ипотека",
+    "rate": 18,
+    "term": 15,
+    "deposit": 20,
+    "payment": 8496
+  },
+  {
+    "id": 1,
+    "imageUrl": "./src/assets/img/bank/vtb.jpg",
+    "mortgage": "Семейная ипотека",
+    "rate": 19,
+    "term": 18,
+    "deposit": 18,
+    "payment": 9198
+  },
+  {
+    "id": 2,
+    "imageUrl": "./src/assets/img/bank/psb.png",
+    "mortgage": "Семейная ипотека",
+    "rate": 21.2,
+    "term": 15,
+    "deposit": 23,
+    "payment": 9569
+  },
+  {
+    "id": 3,
+    "imageUrl": "./src/assets/img/bank/rosselhoz.png",
+    "mortgage": "Военная ипотека",
+    "rate": 23.2,
+    "term": 19,
+    "deposit": 18,
+    "payment": 10498
+  },
+  {
+    "id": 4,
+    "imageUrl": "./src/assets/img/bank/moscow.png",
+    "mortgage": "Семейная ипотека",
+    "rate": 22,
+    "term": 24,
+    "deposit": 24,
+    "payment": 11239
+  },
+  {
+    "id": 5,
+    "imageUrl": "./src/assets/img/bank/bank-sovkom.png",
+    "mortgage": "Семейная ипотека",
+    "rate": 21.5,
+    "term": 28,
+    "deposit": 26,
+    "payment": 11389
+  },
+  {
+    "id": 6,
+    "imageUrl": "./src/assets/img/bank/sberbank.jpg",
+    "mortgage": "Семейная ипотека",
+    "rate": 25,
+    "term": 24,
+    "deposit": 27,
+    "payment": 13980
+  },
+  {
+    "id": 7,
+    "imageUrl": "./src/assets/img/bank/sberbank.jpg",
+    "mortgage": "Семейная ипотека",
+    "rate": 27.4,
+    "term": 25,
+    "deposit": 19,
+    "payment": 14798
+  }
+]

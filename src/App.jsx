@@ -7,6 +7,8 @@ import { Footer } from "./components/Footer";
 import { Catalog } from "./pages/Catalog";
 import { AboutCompany } from "./pages/AboutCompany";
 import { Contacts } from "./pages/Contacts";
+import { FullApartment } from "./pages/FullApartment";
+import { Mortgage } from "./pages/Mortgage";
 
 import "./scss/index.scss";
 
@@ -20,6 +22,8 @@ function App() {
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/about-company" element={<AboutCompany />} />
           <Route path="/contacts" element={<Contacts />} />
+          <Route path="/apartment/:id" element={<FullApartment />} />
+          <Route path="/mortgage" element={<Mortgage />} />
         </Routes>
       </div>
       <Footer />

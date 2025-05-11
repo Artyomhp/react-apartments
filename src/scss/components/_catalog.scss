@@ -1,17 +1,37 @@
 .filter {
     width: 400px;
-    height: 850px;
-    border: 1px solid rgb(36, 76, 79);
+    border: 1px solid #f1ebeb;
+    // background-color: rgb(100, 50, 10);
+    background-color: rgb(245, 245, 220);
+    // color: #f1ebeb;
+    // color: rgb(191, 177, 56);
     padding: 25px 50px;
+    align-self: flex-start;
 }
 
 .filter__label {
-    font-size: 28px;
+    font-size: 27px;
+    color: rgb(191, 177, 56);
+    font-weight: 700;
+    padding: 25px 0;
     text-align: center;
 }
 
 .filter__row {
-    padding: 50px 0;
+    // padding: 50px 0;
+}
+
+.filter__item {
+    padding: 25px 0;
+    border-bottom: 2px solid rgb(191, 177, 56);
+
+    &:first-child {
+        padding: 0 0 25px;
+    }
+
+    &:nth-last-child(2) {
+        margin: 0 0 25px;
+    }
 }
 
 .filter__room {
@@ -29,6 +49,24 @@
     font-size: 32px;
     background-color: inherit;
     color: inherit;
+    transition: color, font-size .3s;
+    height: 45px;
+    width: 45px;
+    // background-color: rgb(5, 14, 41);
+    background-color: rgb(36, 76, 79);
+
+    border-radius: 50%;
+
+    &:hover {
+        color: white;
+    }
+
+}
+
+.active {
+
+    color: white;
+    font-size: 36px;
 }
 
 .filter__square {
@@ -44,21 +82,60 @@
     padding: 10px;
 }
 
-.renovation {
+.horizontal-slider {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    height: 45px;
+
+
+    .example-thumb {
+        cursor: pointer;
+        font-size: 30px;
+        padding: 5px;
+        border-radius: 50%;
+        // background-color: rgb(5, 14, 41);
+        background-color: rgb(36, 76, 79);
+
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-active {
+            font-size: 32px;
+        }
+    }
+
+    .example-track {
+        height: 5px;
+        padding: 5px;
+        // background-color: rgb(5, 14, 41);
+        background-color: rgb(36, 76, 79);
+
+    }
+
+    .example-mark {
+        height: 3px;
+        background-color: #fff;
+    }
+}
+
+.filter__finishing {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
 
-.renovation__top {
-    display: flex;
-    justify-content: space-between;
-}
+.finishing__category {
+    // background-color: rgb(5, 14, 41);
+    background-color: rgb(36, 76, 79);
 
-.renovation__top button {
-    background-color: inherit;
     color: inherit;
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 3px;
 }
 
 .floor {
@@ -82,14 +159,17 @@
 
 .filter__action button {
     background-color: rgb(36, 76, 79);
+    // background-color: rgb(5, 14, 41);
     color: #fff;
+
     padding: 5px 0;
     font-size: 28px;
 }
 
-.filter__action button:last-child {
-    background-color: rgb(158, 182, 183);
-}
+
+// .filter__action button:last-child {
+//     background-color: rgb(158, 182, 183);
+// }
 
 .catalog {
     margin: 50px 0;
@@ -103,8 +183,9 @@
 .catalog__title {
     font-size: 72px;
     text-align: right;
-    margin-bottom: 30px;
+    margin: 75px 0;
     padding-right: 100px;
+    color: #f1ebeb;
 }
 
 .catalog__list {
@@ -114,8 +195,12 @@
 }
 
 .catalog__item {
+    display: flex;
+    gap: 25px;
     padding: 25px;
-    background-color: rgb(36, 76, 79);
+    // border: .1px solid rgb(245, 245, 220);
+    box-shadow: 0 0 2px rgb(245, 245, 220);
+    color: #f1ebeb;
     width: 800px;
 }
 
@@ -139,7 +224,7 @@
     align-items: center;
     grid-template-areas: 'room square . . . . . . . price'
         'entrance floor . . . . . . . .'
-        'renovation . . . . . . . . .';
+        'finishing . . . . . . . . .';
 }
 
 .catalog__room {
@@ -164,6 +249,6 @@
     grid-area: floor;
 }
 
-.catalog__renovation {
-    grid-area: renovation;
+.catalog__finishing {
+    grid-area: finishing;
 }

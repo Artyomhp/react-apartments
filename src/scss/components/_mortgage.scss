@@ -1,0 +1,107 @@
+.mortgage {
+    &__row {
+        display: flex;
+        gap: 60px;
+        margin: 75px 0;
+
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__title {
+        text-align: center;
+        color: #f1ebeb;
+        margin: 75px 0;
+        font-size: 72px;
+    }
+
+    .main-cont {
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        // border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        align-self: flex-start;
+    }
+
+    .label {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .label label {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    .label input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .label button {
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .label button:hover {
+        background-color: #0056b3;
+    }
+
+    .res {
+        text-align: center;
+        margin-top: 20px;
+        color: #333;
+    }
+}
+
+.offer {
+    background-color: #fff;
+    color: #333;
+    padding: 25px;
+    width: 750px;
+
+
+    &__img img {
+        width: 170px;
+    }
+
+    &__proposals {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .proposals__item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .label {
+        font-size: 14px;
+        opacity: 0.5;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+}
