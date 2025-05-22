@@ -61,13 +61,12 @@
         color: white;
     }
 
+    &:focus {
+        color: white;
+        font-size: 36px;
+    }
 }
 
-.active {
-
-    color: white;
-    font-size: 36px;
-}
 
 .filter__square {
     border: 1px solid rgb(172, 184, 182);
@@ -132,10 +131,16 @@
     background-color: rgb(36, 76, 79);
 
     color: inherit;
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     padding: 3px;
+    transition: font-size .3s;
+    max-height: 27px;
+
+    &:focus {
+        font-size: 20px;
+    }
 }
 
 .floor {

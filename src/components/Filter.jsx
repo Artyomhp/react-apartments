@@ -1,15 +1,21 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { setReset } from "../redux/slices/filterSlice";
+import {
+  setRoom,
+  setArea,
+  setFinishing,
+  setFloor,
+  setApply,
+  setReset,
+} from "../redux/slices/filterSlice";
 import { FilterAreaSlider } from "../components/FilterAreaSlider";
-export const Filter = ({ roomValue, onClickRoom, onClickApply }) => {
+// export const Filter = ({ roomValue, onClickRoom, onClickApply }) => {
+export const Filter = ({ onClickApply }) => {
+  const dispatch = useDispatch();
+  const { room, area, finishing, floor } = useSelector((state) => state.filter);
   const rooms = [1, 2, 3];
-  const finishing = ["все", "white-box", "с ремонтом", "без отделки"];
-  const arrays = {
-    arrArea: [37, 85],
-    arrFloor: [1, 8],
-  };
+  const finishingTypes = ["все", "white-box", "с ремонтом", "без отделки"];
   return (
     <div className="filter">
       <ul className="filter__list">
@@ -20,12 +26,12 @@ export const Filter = ({ roomValue, onClickRoom, onClickApply }) => {
               {rooms.map((obj, id) => (
                 <button
                   key={id}
-                  onClick={() => onClickRoom(obj)}
-                  className={
-                    roomValue === obj
-                      ? "room__category active"
-                      : "room__category"
-                  }
+                  // onClick={() => onClickRoom(obj)}
+                  onClick={() => dispatch(setRoom(obj))}
+                  // className={
+                  //   room === obj ? "room__category_active" : "room__category"
+                  // }
+                  className="room__category"
                 >
                   {obj}
                 </button>
@@ -35,13 +41,21 @@ export const Filter = ({ roomValue, onClickRoom, onClickApply }) => {
         </li>
         <li className="filter__item">
           <h5 className="filter__label">Площадь</h5>
-          <FilterAreaSlider defaultValue={arrays.arrArea} min={37} max={85} />
+          <FilterAreaSlider defaultValue={area} min={area[0]} max={area[1]} />
         </li>
         <li className="filter__item">
           <h5 className="filter__label">Отделка</h5>
           <div className="filter__finishing">
-            {finishing.map((obj, id) => (
-              <button key={id} className="finishing__category">
+            {finishingTypes.map((obj, id) => (
+              <button
+                key={id}
+                onClick={() => dispatch(setFinishing(obj))}
+                className={
+                  finishing === obj
+                    ? "finishing__category active"
+                    : "finishing__category"
+                }
+              >
                 {obj}
               </button>
             ))}
@@ -49,13 +63,23 @@ export const Filter = ({ roomValue, onClickRoom, onClickApply }) => {
         </li>
         <li className="filter__item">
           <h5 className="filter__label">Этаж</h5>
-          <FilterAreaSlider defaultValue={arrays.arrFloor} min={1} max={8} />
+          {/* <FilterAreaSlider defaultValue={arrays.arrFloor} min={1} max={8} /> */}
+          <FilterAreaSlider
+            defaultValue={floor}
+            min={floor[0]}
+            max={floor[1]}
+          />
         </li>
         <li className="filter__action">
-          <button onClick={() => onClickApply()} className="apply">
+          {/* <button onClick={() => onClickApply()} className="apply"> */}
+          <button onClick={onClickApply} className="apply">
             Применить
           </button>
-          <button className="reset" onClick={setReset}>
+          <button
+            className="reset"
+            // onClick={() => console.log(dispatch(setReset()))}
+            onClick={() => dispatch(setReset())}
+          >
             Сбросить
           </button>
         </li>

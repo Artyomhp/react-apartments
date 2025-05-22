@@ -3,9 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     room: null,
     area: [37, 85],
-    finishing: '',
+    finishing: 'все',
     floor: [1, 8],
-    appliedFilters: null
+    // appliedFilters: null
 }
 
 const filterSlice = createSlice({
@@ -24,15 +24,28 @@ const filterSlice = createSlice({
         setFloor(state, action) {
             state.floor = action.payload
         },
-        setApply: (state) => {
-            state.appliedFilters = {
-                room: state.room,
-                area: [...state.area],
-                finishing: state.finishing,
-                floor: [...state.floor],
-            }
+        // setApply: (state) => {
+        //     state.appliedFilters = {
+        //         room: state.room,
+        //         area: [...state.area],
+        //         finishing: state.finishing,
+        //         floor: [...state.floor],
+        //     }
+        // },
+        setApply(state, action) {
+            state.room = action.payload
+            state.area = action.payload
+            state.finishing = action.payload
+            state.floor = action.payload
         },
-        setReset: () => initialState
+        // setReset: (state) => {
+        //     Object.assign(state, initialState)
+        // }
+        setReset: (state) => {
+            // state.room = initialState.room
+            // state.area = initialState.area
+            console.log(initialState)
+        }
     }
 })
 

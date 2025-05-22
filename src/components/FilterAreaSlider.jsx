@@ -1,6 +1,6 @@
 import ReactSlider from "react-slider";
 
-export const FilterAreaSlider = ({ defaultValue, min, max, withTracks }) => {
+export const FilterAreaSlider = ({ defaultValue, onChange, min, max }) => {
   return (
     <ReactSlider
       className="horizontal-slider"
@@ -11,6 +11,7 @@ export const FilterAreaSlider = ({ defaultValue, min, max, withTracks }) => {
       defaultValue={defaultValue}
       min={min}
       max={max}
+      onChange={onChange}
       ariaLabel={["Lower thumb", "Upper thumb"]}
       ariaValuetext={(state) => `Thumb value ${state.valueNow}`}
       renderThumb={(props, state) => <div {...props}>{state.valueNow}</div>}

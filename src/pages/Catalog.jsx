@@ -11,6 +11,7 @@ import { setApply, setReset, setRoom } from "../redux/slices/filterSlice";
 
 export const Catalog = () => {
   const dispatch = useDispatch();
+  const { appliedFilters } = useSelector((state) => state.filter);
 
   const { items } = useSelector((state) => state.apartments);
   const { room, finishing } = useSelector((state) => state.filter);
@@ -27,7 +28,7 @@ export const Catalog = () => {
 
   const onClickApply = () => {
     dispatch(setApply());
-    getApartments();
+    // getApartments();
   };
 
   const checkArea = () => {
@@ -36,8 +37,8 @@ export const Catalog = () => {
       : console.log("не найдено");
   };
 
-  const apartments = items.map((obj) => (
-    <Link to={`/apartment/${obj.id}`} key={obj.id}>
+  const apartments = items.map((obj, id) => (
+    <Link to={`/apartment/${obj.id}`} key={id}>
       <ApartmentBlock {...obj} />
     </Link>
   ));
@@ -51,6 +52,11 @@ export const Catalog = () => {
   React.useEffect(() => {
     getApartments();
   }, []);
+
+  React.useEffect(() => {
+    dispatch(fetchApartments(appliedFilters));
+    console.log(appliedFilters);
+  }, [appliedFilters]);
   return (
     <div className="catalog">
       <div className="container">
