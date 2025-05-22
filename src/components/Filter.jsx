@@ -26,12 +26,12 @@ export const Filter = ({ onClickApply }) => {
               {rooms.map((obj, id) => (
                 <button
                   key={id}
-                  // onClick={() => onClickRoom(obj)}
-                  onClick={() => dispatch(setRoom(obj))}
-                  // className={
-                  //   room === obj ? "room__category_active" : "room__category"
-                  // }
-                  className="room__category"
+                  // onClick={() => onRoomChange(obj)}
+                  className={
+                    roomValue === obj
+                      ? "room__category active"
+                      : "room__category"
+                  }
                 >
                   {obj}
                 </button>

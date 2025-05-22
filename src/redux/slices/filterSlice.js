@@ -49,7 +49,6 @@ const filterSlice = createSlice({
     }
 })
 
-// export const { setRoom, setFinishing, setReset } = filterSlice.actions
 export const { setRoom, setFinishing, setArea, setFloor, setApply, setReset } = filterSlice.actions
 
 export default filterSlice.reducer
